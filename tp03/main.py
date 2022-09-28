@@ -25,5 +25,13 @@ def main():
     
     print(r)
 
+
+
+    r2 = Rectangle(15,2)
+    del r2
+    print(r2)
+
+
+
 if __name__ == '__main__':
     main()
