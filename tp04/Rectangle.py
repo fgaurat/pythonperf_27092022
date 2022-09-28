@@ -1,9 +1,12 @@
 
 
-class Rectangle:
+from ICalcGeo import ICalcGeo
+
+
+class Rectangle(ICalcGeo):
 
     def __init__(self, longueur, largeur):
-        print(f"def __init__(self,{longueur},{largeur}) -> None")
+        print(f"Rectangle def __init__(self,{longueur},{largeur}) -> None")
         self._longueur = longueur
         self._largeur = largeur
 
