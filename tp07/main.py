@@ -2,6 +2,7 @@
 import sys
 import os
 from Rectangle import Rectangle
+from Cercle import Cercle
 
 
 class Test:
@@ -19,17 +20,23 @@ class Test:
 
 def main():
     r1 = Rectangle(2, 3)
-    r2 = Rectangle(2, 3)
+    r2 = Rectangle(1252, 4564563)
 
-    # r = Rectangle.build_from_str("2,3")
-    # print(r)
-    # t = Test()
-    # t()
+    c1 = Cercle(2)
+    c2 = Cercle(2)
     print(hex(id(r1)))
     print(hex(id(r2)))
-    r1.longueur =1000
     print(r1) 
     print(r2) 
-
+    r1.longueur = 10
+    print(r1) 
+    print(r2) 
+    print(hex(id(c1)))
+    print(hex(id(c2)))
+    print(c1) 
+    print(c2) 
+    c1.rayon = 20 
+    print(c1) 
+    print(c2) 
 if __name__ == '__main__':
     main()

@@ -2,10 +2,11 @@
 
 class Singleton(type):
 
-    _instance={}
+    _instance=None
 
     def __call__(self, *args, **kwargs):
-        if self not in self._instance:
-            self._instance[self] = super(Singleton,self).__call__(*args, **kwargs)
+        print(type(self))
+        if self._instance is None:
+            self._instance = super(Singleton,self).__call__(*args, **kwargs)
         
-        return self._instance[self]
+        return self._instance
