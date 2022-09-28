@@ -13,6 +13,7 @@ def do_log(func):
 
 
 
+@do_log
 def say_hello(name):
     print("Hello",name)
 

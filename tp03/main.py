@@ -7,14 +7,16 @@ from Rectangle import Rectangle
 
 def main():
     r = Rectangle(2,3)
-    print(r.get_longueur())
-    assert r.get_longueur() == 2
+    print(r.longueur)
+    assert r.longueur == 2
 
-    r.set_longueur(12)
-    print(r.get_longueur())
+    r.longueur = 12
+    print(r.longueur)
+    print(r.largeur)
+    print(r._Rectangle__toto)
 
-
-    print(r)    
+    
+    print(r)
 
 if __name__ == '__main__':
     main()

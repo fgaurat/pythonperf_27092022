@@ -6,23 +6,29 @@ class Rectangle:
         print(f"def __init__(self,{longueur},{largeur}) -> None")
         self._longueur = longueur
         self._largeur = largeur
+        self.__toto=0
 
-    def get_longueur(self):
+    @property
+    def longueur(self):
         return self._longueur
-
-    def get_largeur(self):
+    
+    @property
+    def largeur(self):
         return self._largeur
 
-    def set_longueur(self, longueur):
+    @longueur.setter
+    def longueur(self, longueur):
         self._longueur = longueur
 
-    def set_largeur(self, largeur):
+    @largeur.setter
+    def largeur(self, largeur):
         self._largeur = largeur
 
     def get_surface(self):
         return self._longueur*self._largeur
     
-
+    def gettoto(self):
+        return self.__toto
     def __str__(self) -> str:
         return f"{__class__.__name__} {self._longueur=} {self._largeur=}"
 
