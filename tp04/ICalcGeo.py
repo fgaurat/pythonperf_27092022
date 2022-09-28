@@ -3,4 +3,4 @@
 class ICalcGeo:
 
     def get_surface(self):
-        pass
+        raise NotImplementedError("ICalcGeo get_surface!!!!")

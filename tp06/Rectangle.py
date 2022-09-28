@@ -1,12 +1,5 @@
 
-
-# from ICalcGeo import ICalcGeo
-from IMetaCalcGeo import IMetaCalcGeo
-
-
-# class Rectangle(ICalcGeo):
-class Rectangle(IMetaCalcGeo):
-
+class Rectangle:
     def __init__(self, longueur, largeur):
         print(f"Rectangle def __init__(self,{longueur},{largeur}) -> None")
         self._longueur = longueur

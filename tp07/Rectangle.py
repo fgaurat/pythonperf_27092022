@@ -1,17 +1,24 @@
 
-
-# from ICalcGeo import ICalcGeo
-from IMetaCalcGeo import IMetaCalcGeo
+from Singleton import Singleton
 
 
-# class Rectangle(ICalcGeo):
-class Rectangle(IMetaCalcGeo):
-
-    def __init__(self, longueur, largeur):
+class Rectangle(metaclass=Singleton):
+    def __init__(self, longueur=0, largeur=0):
         print(f"Rectangle def __init__(self,{longueur},{largeur}) -> None")
         self._longueur = longueur
         self._largeur = largeur
 
+
+
+    @classmethod
+    def build_from_str(cls,value): # "2,3"
+        keys = ["longueur","largeur"]
+        values = [int(i) for i in value.split(",") ] #  ["2","3"]=> [2,3]
+        params = dict(zip(keys,values))
+
+        
+        return cls(**params)
+    
     @property
     def longueur(self):
         return self._longueur

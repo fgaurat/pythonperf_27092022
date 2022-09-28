@@ -1,16 +1,15 @@
 
 
-# from ICalcGeo import ICalcGeo
-from IMetaCalcGeo import IMetaCalcGeo
+class Rectangle:
 
 
-# class Rectangle(ICalcGeo):
-class Rectangle(IMetaCalcGeo):
+    _cpt = 0
 
     def __init__(self, longueur, largeur):
-        print(f"Rectangle def __init__(self,{longueur},{largeur}) -> None")
+        print(f"def __init__(self,{longueur},{largeur}) -> None")
         self._longueur = longueur
         self._largeur = largeur
+        Rectangle._cpt+=1
 
     @property
     def longueur(self):
@@ -31,6 +30,11 @@ class Rectangle(IMetaCalcGeo):
     def get_surface(self):
         return self._longueur*self._largeur
     
+
+    @staticmethod
+    def get_cpt():
+        return Rectangle._cpt
+
     def __str__(self) -> str:
         return f"{__class__.__name__} {self._longueur=} {self._largeur=}"
 
