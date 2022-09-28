@@ -6,7 +6,6 @@ class Rectangle:
         print(f"def __init__(self,{longueur},{largeur}) -> None")
         self._longueur = longueur
         self._largeur = largeur
-        self.__toto=0
 
     @property
     def longueur(self):
@@ -27,8 +26,10 @@ class Rectangle:
     def get_surface(self):
         return self._longueur*self._largeur
     
-    def gettoto(self):
-        return self.__toto
     def __str__(self) -> str:
         return f"{__class__.__name__} {self._longueur=} {self._largeur=}"
+
+
+    def __eq__(self,r)->bool:
+        return self._longueur == r._longueur and self._largeur == r._largeur
 

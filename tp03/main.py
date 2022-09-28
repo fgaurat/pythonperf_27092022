@@ -7,13 +7,20 @@ from Rectangle import Rectangle
 
 def main():
     r = Rectangle(2,3)
+    r1 = Rectangle(2,3)
+    
     print(r.longueur)
     assert r.longueur == 2
 
-    r.longueur = 12
+    # r.longueur = 12
     print(r.longueur)
     print(r.largeur)
-    print(r._Rectangle__toto)
+
+    # if r.__eq__(r1):
+    if r==r1:
+        print("ok")
+    else:
+        print("ko")
 
     
     print(r)
