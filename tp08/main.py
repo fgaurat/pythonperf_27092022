@@ -2,15 +2,17 @@
 import sys
 import os
 
+from TodoDAO import TodoDAO
+
 
 def main():
-    dao = TodoDAO('./todos_db.sqlite')
+    dao = TodoDAO('./tp08/todos_db.sqlite')
 
 
-    todos = dao.findAll()
+    todos = dao.find_all()
 
     for todo in todos:
-        print(todo.title)
+        print(todo)
 
 if __name__ == '__main__':
     main()
