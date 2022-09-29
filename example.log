@@ -1,0 +1,19 @@
+WARNING:root:Watch out!
+INFO:root:info
+WARNING - 2022-09-29 11:47:23,685 - Watch out!
+INFO - 2022-09-29 11:47:23,685 - info
+Watch out!
+info
+2022-09-29 11:53:04,150 - MainProcess - __main__ - WARNING - Watch out!
+2022-09-29 11:53:04,151 - MainProcess - __main__ - INFO - info
+2022-09-29 11:54:11,353 - MainProcess - __main__ - WARNING - Watch out!
+2022-09-29 11:54:11,353 - MainProcess - __main__ - INFO - info
+2022-09-29 11:54:33,233 - MainProcess - __main__ - WARNING - Watch out!
+2022-09-29 11:54:33,234 - MainProcess - __main__ - INFO - info
+2022-09-29 11:54:46,070 - MainProcess - __main__ - WARNING - Watch out!
+2022-09-29 11:54:46,070 - MainProcess - __main__ - INFO - info
+2022-09-29 11:55:02,740 - MainProcess - __main__ - WARNING - Watch out!
+2022-09-29 11:55:02,740 - MainProcess - __main__ - INFO - info
+2022-09-29 11:55:26,587 - MainProcess - __main__ - WARNING - Watch out!
+2022-09-29 11:55:26,587 - MainProcess - __main__ - INFO - info
+2022-09-29 11:55:26,587 - MainProcess - __main__ - ERROR - error !division by zero
