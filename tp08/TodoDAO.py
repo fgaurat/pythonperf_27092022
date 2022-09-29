@@ -15,7 +15,11 @@ class TodoDAO:
         for id,title,completed in res.fetchall():
             t = Todo(id,title,completed)
             yield t
-
+    
+    def save(self,todo:Todo):
+        cur = self._con.cursor()
+        cur.execute(f"INSERT INTO todos_tbl(title,completed) VALUES ('{todo.title}',{todo.completed})")
+        self._con.commit()
 
     def __del__(self):
         self._con.close()
