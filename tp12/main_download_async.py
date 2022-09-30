@@ -7,7 +7,7 @@ import threading
 import httpx
 
 
-async def download(url):
+async def download_without_async(url):
     try:
         loop = asyncio.get_event_loop()
         print(threading.current_thread().name,url)
@@ -17,8 +17,15 @@ async def download(url):
     except Exception as e:
         print(e)
 
-# async def write_log(innput_q):
-#     pass
+async def download(url):
+    print(threading.current_thread().name,url)
+    log_file = url.split('/')[-1]
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url)
+    
+    open(log_file,'w').write(response.text)
+
+# async def write_log(input_q):
 #     # open(log_file,'w').write(response.text)
 
 async def main():
