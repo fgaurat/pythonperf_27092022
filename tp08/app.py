@@ -20,9 +20,6 @@ def get_todos():
 
 
 
-
-
-
     
 
 # @app.route("/todosold")
